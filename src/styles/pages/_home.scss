@@ -1,0 +1,187 @@
+.wrapper--blue {
+  background-image: url(/images/icons/screw.png),
+                    linear-gradient(to right, #71b6d0, #6aa0db);
+}
+.services {
+  padding: 9vh 0 5vh;
+  box-sizing: border-box;
+  @include clearfix;
+  &__image {
+    margin-top: 30px;
+    @include respond-to(handhelds) {
+      margin: 0 0 40px;
+      box-sizing: border-box;
+      img {
+        max-width: 50%;
+      }
+    }
+    @include respond-to(tablets + laptop) {
+      box-sizing: border-box;
+      img {
+        max-width: 150px;
+      }
+    }
+  }
+  &__items {
+    padding-left: 3vw;
+    @include respond-to(handhelds + tablets) {
+      box-sizing: border-box;
+    }
+  }
+  &-item {
+    float: left;
+    display: block;
+    width: 100%;
+    max-width: 270px;
+    min-height: 220px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+    &__header {
+      max-width: 180px;
+      min-height: 65px;
+      margin-bottom: 13px;
+      overflow: hidden;
+      @include respond-to(handhelds) {
+        max-width: 100%;
+      }
+    }
+    @include respond-to(handhelds) {
+      float: none;
+      margin: 0 auto 30px auto;
+    }
+    @include respond-to(tablets) {
+      max-width: 250px;
+    }
+  }
+}
+.services-header__price {
+  float: left;
+  width: 64px;
+  height: 34px;
+  margin-top: 20px;
+  -moz-border-radius: 110px / 60px;
+  -webkit-border-radius: 110px / 60px;
+  border-radius: 110px / 60px;
+  background: $green;
+  box-sizing: border-box;
+  text-align: center;
+  @include font-face($font-myriad-bold, 16px, 32px, $white);
+  @include respond-to(handhelds) {
+    float: right;
+  }
+}
+.services-header__icon {
+  float: right;
+  @include respond-to(handhelds) {
+    float: left;
+  }
+}
+.services-item__links {
+  div {
+    margin-bottom: 10px;
+    @include font-face($font-family-regular, $font-size-medium, $line-height-base, $black);
+  }
+  a {
+    display: block;
+    @include font-face($font-myriad-regular, $font-size-base, 25px, #7a8f9f);
+  }
+}
+
+.price {
+  padding: 9vh 0 11vh;
+  &-list {
+    margin-top: 3vh;
+    box-sizing: border-box;
+    @include respond-to(handhelds) {
+      margin-top: 0;
+    }
+    @include clearfix;
+    &__header {
+      width: 100%;
+      padding: 10px 0;
+      border-radius: 20px;
+      background: #e4e4e4;
+      @include clearfix;
+      @include respond-to(handhelds) {
+        display: none;
+      }
+    }
+    &__cell {
+      padding-left: 45px;
+      border-right: 2px solid $white;
+      @include font-face($font-family-medium, 16px, 22px, $black);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      &:last-child {
+        border-right: none;
+      }
+      @include respond-to(handhelds) {
+        padding-left: 0;
+      }
+      @include respond-to(tablets) {
+        padding-left: 30px;
+      }
+    }
+    &__services {
+      box-sizing: border-box;
+      .price-list__row {
+        display: block;
+        padding: 30px 0;
+        border-bottom: 2px dashed #e4e4e4;
+        text-decoration: none;
+        @include clearfix;
+        span {
+          display: block;
+        }
+        &:hover {
+          .cell--name {
+            text-decoration: none;
+          }
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+        @include respond-to(handhelds) {
+          &:first-child {
+            padding: 15px 0 30px;
+          }
+        }
+      }
+      .cell--name {
+        text-decoration: underline;
+        @include font-face($font-family-regular, $font-size-base, 22px, $black);
+        @include respond-to(handhelds) {
+          margin-bottom: 5px;
+        }
+        @include respond-to(tablets) {
+          font-size: 13px;
+        }
+      }
+      .cell--description {
+        text-transform: none;
+        @include font-face($font-family-base, $font-size-base, 22px, #7c7c7c);
+      }
+      .cell--price {
+        text-transform: none;
+        @include font-face($font-family-base, 31px, 50px, $coral);
+      }
+    }
+  }
+  &-footer {
+    max-width: 530px;
+    margin: 15px auto 0;
+    &__link {
+      margin-left: 60px;
+      color: #7c7c7c;
+      @include respond-to(handhelds) {
+        display: block;
+        width: 90px;
+        margin: 20px auto 0;
+      }
+    }
+  }
+  @include respond-to(tablets) {
+    padding: 7vh 0;
+  }
+}
