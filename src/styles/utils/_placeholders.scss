@@ -1,5 +1,11 @@
 input[type='text'] {
   &::-webkit-input-placeholder {
-    @include font-face($font-size-base, 14px, 22px, $black);
+    @include font-face($font-family-base, $font-size-base, $line-height-base, $black);
+  }
+  &:-moz-placeholder {
+    @include font-face($font-family-base, $font-size-base, $line-height-base, $black);
+  }
+  &:-ms-input-placeholder {
+    @include font-face($font-family-base, $font-size-base, $line-height-base, $black);
   }
 }
