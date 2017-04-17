@@ -26,6 +26,7 @@
   min-height: 1px;
   padding-left:  ($gutter / 2);
   padding-right: ($gutter / 2);
+  box-sizing: border-box;
 }
 @mixin make-xs-column-offset($columns) {
   margin-left: percentage(($columns / $grid-columns));
@@ -43,6 +44,7 @@
   min-height: 1px;
   padding-left:  ($gutter / 2);
   padding-right: ($gutter / 2);
+  box-sizing: border-box;
 
   @media (min-width: $screen-sm-min) and (max-width: $screen-md-min - 1) {
     float: left;
@@ -71,6 +73,7 @@
   min-height: 1px;
   padding-left:  ($gutter / 2);
   padding-right: ($gutter / 2);
+  box-sizing: border-box;
 
   @media (min-width: $screen-md-min) and (min-width: $screen-lg-min - 1) {
     float: left;
@@ -99,6 +102,7 @@
   min-height: 1px;
   padding-left:  ($gutter / 2);
   padding-right: ($gutter / 2);
+  box-sizing: border-box;
 
   @media (min-width: $screen-lg-min) {
     float: left;

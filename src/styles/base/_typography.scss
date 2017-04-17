@@ -1,23 +1,30 @@
 
-
 @font-face {
-  font-family: 'PFDinDisplayProBold';
+  font-family: PFBeauSansProRegular;
   font-style: normal;
-  font-weight: 600;
-  src:  url('/fonts/PFDinBold/PFDinDisplayProBold.woff') format('woff'),
-  url('/fonts/PFDinBold/PFDinDisplayProBold.otf') format('otf'),
-  url('/fonts/PFDinBold/PFDinDisplayProBold.ttf') format('ttf'),
-  url('/fonts/PFDinBold/PFDinDisplayProBold.eot') format('eot'),
-  url('/fonts/PFDinBold/PFDinDisplayProBold.svg') format('svg');
+  font-weight: 400;
+  src:  url('/fonts/PFBeauSansProRegular/PFBeauSansProReg.woff') format('woff'),
+  url('/fonts/PFBeauSansProRegular/PFBeauSansProReg.otf') format('otf'),
+  url('/fonts/PFBeauSansProRegular/PFBeauSansProReg.ttf') format('ttf'),
+  url('/fonts/PFBeauSansProRegular/PFBeauSansProReg.eot') format('eot'),
+  url('/fonts/PFBeauSansProRegular/PFBeauSansProReg.svg') format('svg');
 }
 
 @font-face {
-  font-family: 'PFDinDisplayProRegular';
+  font-family: PFBeauSansProBold;
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/PFBeauSansProBold/PFBeauSansProBold.woff') format('woff'),
+  url('/fonts/PFBeauSansProBold/PFBeauSansProBold.otf') format('otf'),
+  url('/fonts/PFBeauSansProBold/PFBeauSansProBold.ttf') format('ttf'),
+  url('/fonts/PFBeauSansProBold/PFBeauSansProBold.eot') format('eot'),
+  url('/fonts/PFBeauSansProBold/PFBeauSansProBold.svg') format('svg');
+}
+
+@font-face {
+  font-family: ProximaNovaRegular;
   font-style: normal;
   font-weight: 400;
-  src:  url('/fonts/PFDinBold/PFDinDisplayProRegular.woff') format('woff'),
-  url('/fonts/PFDinBold/PFDinDisplayProRegular.otf') format('otf'),
-  url('/fonts/PFDinBold/PFDinDisplayProRegular.ttf') format('ttf'),
-  url('/fonts/PFDinBold/PFDinDisplayProRegular.eot') format('eot'),
-  url('/fonts/PFDinBold/PFDinDisplayProRegular.svg') format('svg');
+  src: url('/fonts/ProximaNovaRegular/ProximaNovaRegular.woff') format('woff'),
+  url('/fonts/ProximaNovaRegular/ProximaNovaRegular.otf') format('otf');
 }

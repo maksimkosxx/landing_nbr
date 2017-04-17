@@ -1,0 +1,66 @@
+.wrapper--hero {
+  background: #f3f3f3;
+  min-height: 954px;
+}
+.header {
+  padding: 40px 0;
+  overflow: hidden;
+  &-logo {
+    @include make-lg-column(6);
+    @include make-xs-column(12);
+    &__image {
+      display: block;
+      width: 70%;
+      max-width: 230px;
+      height: 55px;
+      padding: 43px 0 0 40px;
+      box-sizing: border-box;
+      background: url(/images/logo/logo.png) left center no-repeat;
+    }
+    &__text {
+      display: block;
+      @include font-face($font-proxima-regular, $font-size-base - 4px, 12px, #797979);
+    }
+  }
+  &-phone {
+    @include make-lg-column(6);
+    @include make-xs-column(12);
+    text-align: right;
+    &__text {
+      @include font-face($font-family-base, $font-size-base - 2px, $line-height-medium, $black);
+    }
+    &__number {
+      display: block;
+      @include font-face($font-family-base, $font-size-base + 8px, $line-height-medium, #4cb11e);
+    }
+  }
+}
+.hero {
+  &-header {
+    @include make-lg-column(12);
+    margin-bottom: 50px;
+    text-align: center;
+    h1 {
+      span {
+        color: $green;
+      }
+    }
+    &__slogan {
+      @include font-face($font-family-base, $font-size-base + 8px, $line-height-medium, $black);
+    }
+  }
+  &-content {
+    &__image {
+      @include make-lg-column(7);
+      img {
+        width: 100%;
+        max-width: 608px;
+      }
+    }
+    &__text {
+      @include make-lg-column(5);
+      background: #ffffff;
+      border-radius: 10px;
+    }
+  }
+}

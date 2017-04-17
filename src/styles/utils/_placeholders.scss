@@ -1,5 +1,5 @@
 input[type='text'] {
   &::-webkit-input-placeholder {
-    @include font-face($font-ubuntu-regular, 14px, 22px, $black);
+    @include font-face($font-size-base, 14px, 22px, $black);
   }
 }

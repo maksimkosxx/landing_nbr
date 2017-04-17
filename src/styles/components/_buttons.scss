@@ -1,7 +1,7 @@
 
 .btn--header {
   margin-top: 40px;
-  @include button(85%, 80px, 13px, linear-gradient(to right, $green, #79ce6d), $white, $font-family-base, $font-size-base, $line-height-base);
+  @include button(85%, 80px, 13px, linear-gradient(to right, $green, #79ce6d), $black, $font-family-base, $font-size-base, $line-height-base);
   &:hover {
     background: linear-gradient(to right, #79ce6d, #79ce6d);
   }

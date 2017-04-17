@@ -5,54 +5,18 @@ body {
 
 a {
   @include font-face($font-family-base, $font-size-base, $line-height-base, $black);
-  @include links($black, $coral, $black, $coral);
+  @include links($black, $green, $black, $green);
+  text-decoration: none;
 }
 
 h1 {
-  @include font-face($font-family-medium, $font-size-h1, $line_height_title, $black);
-  @include respond-to(handhelds) {
-    @include font-face($font-family-medium, $font-size-h1 - 15px, $line_height_title - 15px, $black);
-  }
+  margin: 0 0 5px 0;
+  @include font-face($font-family-base, $font-size-large, $line-height-large, $black);
 }
 
-.custom-block {
-  min-height: 520px;
-  padding: 9vh 0;
-  box-sizing: border-box;
-  @include clearfix;
-}
 
 .title {
   margin: 0 0 5px;
-  @include font-face($font-family-medium, $font_size__title, $line_height_title, $black);
-  @include respond-to(handhelds) {
-    @include font-face($font-family-medium, $font_size__title - 16px, $line_height_title - 15px, $black);
-  }
-  @include respond-to(tablets) {
-    @include font-face($font-family-medium, $font_size__title - 5px, $line_height_title - 5px, $black);
-  }
+  @include font-face($font-size-base, $font-size-large, $line-height-large, $black);
 }
 
-.slogan {
-  margin-bottom: 5px;
-  @include font-face($font-family-regular, $font-size-large, $line-height-base, $coral);
-  @include respond-to(handhelds) {
-    @include font-face($font-family-regular, $font-size-large - 8px, $line-height-base, $coral);
-  }
-}
-
-
-a.phone__number {
-  text-decoration: none;
-  @include font-face($font-family-medium, $font-size-large + 7px, 4.0em, #333638);
-  &:hover,
-  &:active {
-    color: $coral;
-  }
-  @include respond-to(handhelds) {
-    @include font-face($font-family-medium, 25px, $line-height-base, #333638);
-  }
-  @include respond-to(tablets) {
-    @include font-face($font-family-medium, $font-size-large + 7px, 3em, #333638);
-  }
-}
