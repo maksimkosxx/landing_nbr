@@ -1211,6 +1211,7 @@ input[type="submit"] {
       margin-bottom: 15px;
       padding: 20px 0 0 20px;
       border: none;
+      outline: none;
       border-radius: 13px;
       box-sizing: border-box; }
       .questions-form form ul textarea::-webkit-input-placeholder {
@@ -1671,9 +1672,41 @@ input[type="submit"] {
           float: left;
           width: 33.3333333333%; } }
 
+.wrapper--diagnostics {
+  background: #e7e7e7; }
+
+.diagnostics {
+  padding: 8vh 0; }
+  .diagnostics-header__title span {
+    color: #4cae6d; }
+  .diagnostics-header__slogan {
+    color: #656565; }
+  .diagnostics-content {
+    margin-top: 50px;
+    overflow: hidden; }
+    .diagnostics-content__text {
+      position: relative;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px;
+      box-sizing: border-box; }
+      @media (min-width: 1200px) {
+        .diagnostics-content__text {
+          float: left;
+          width: 50%; } }
+    .diagnostics-content__image {
+      position: relative;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px;
+      box-sizing: border-box; }
+      @media (min-width: 1200px) {
+        .diagnostics-content__image {
+          float: left;
+          width: 50%; } }
+
 .time-info {
   padding: 8vh 0 5vh;
-  border-top: 1px solid #000000;
   text-align: center; }
   .time-info__title {
     margin-bottom: 15px; }

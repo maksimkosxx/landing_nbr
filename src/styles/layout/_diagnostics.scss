@@ -1,0 +1,24 @@
+.wrapper--diagnostics {
+  background: #e7e7e7;
+}
+.diagnostics {
+  padding: 8vh 0;
+  &-header {
+    &__title span {
+      color: $green;
+    }
+    &__slogan {
+      color: #656565;
+    }
+  }
+  &-content {
+    margin-top: 50px;
+    overflow: hidden;
+    &__text {
+      @include make-lg-column(6);
+    }
+    &__image {
+      @include make-lg-column(6);
+    }
+  }
+}
