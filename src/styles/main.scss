@@ -35,13 +35,19 @@
         'base/typography',
         'base/base';
 
-@import 'components/buttons';
 
 @import 'layout/header',
-        'layout/hero',
         'layout/forms',
-        'layout/contacts',
+        'layout/hero',
+        'layout/services',
+        'layout/phone-block',
+        'layout/brands',
+        'layout/advantages',
+        'layout/reviews',
+        'layout/special-offer',
+        'layout/certificates',
+        'layout/time-info',
         'layout/map',
+        'layout/questions',
         'layout/footer';
 
-@import 'pages/home';

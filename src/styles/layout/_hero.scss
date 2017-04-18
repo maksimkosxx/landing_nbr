@@ -1,40 +1,9 @@
 .wrapper--hero {
-  background: #f3f3f3 url(/images/hero-background.jpg) no-repeat;
+  background-image: url(/images/hero-background.jpg),
+  linear-gradient(to bottom, #f7faff, #eaf2fd);
   background-size: 100%;
-  min-height: 954px;
-}
-.header {
-  padding: 40px 0;
-  overflow: hidden;
-  &-logo {
-    @include make-lg-column(6);
-    @include make-xs-column(12);
-    &__image {
-      display: block;
-      width: 70%;
-      max-width: 230px;
-      height: 55px;
-      padding: 43px 0 0 40px;
-      box-sizing: border-box;
-      background: url(/images/logo/logo.png) left center no-repeat;
-    }
-    &__text {
-      display: block;
-      @include font-face($font-proxima-regular, $font-size-base - 4px, 12px, #797979);
-    }
-  }
-  &-phone {
-    @include make-lg-column(6);
-    @include make-xs-column(12);
-    text-align: right;
-    &__text {
-      @include font-face($font-family-base, $font-size-base - 2px, $line-height-medium, $black);
-    }
-    &__number {
-      display: block;
-      @include font-face($font-family-base, $font-size-base + 8px, $line-height-medium, #4cb11e);
-    }
-  }
+  background-repeat: no-repeat;
+  padding-bottom: 8vh;
 }
 .hero {
   &-header {
@@ -68,61 +37,6 @@
       text-align: center;
       overflow: hidden;
       box-sizing: border-box;
-      form {
-        display: block;
-        max-width: 320px;
-        width: 100%;
-        margin: 0 auto;
-        box-sizing: border-box;
-      }
-      input[type="text"] {
-        width: 100%;
-        height: 47px;
-        margin-bottom: 15px;
-        padding-left: 20px;
-        border: 2px dashed #696969;
-        border-radius: 7px;
-        box-sizing: border-box;
-        outline: none;
-      }
-      input[type="submit"] {
-        width: 100%;
-        height: 80px;
-        margin-bottom: 25px;
-        border: none;
-        border-bottom: 5px solid #8d0d0d;
-        border-radius: 13px;
-        box-sizing: border-box;
-        background: $btn-red;
-        outline: none;
-        color: #ffffff;
-        @include font-face($font-family-bold, $font-size-base, $line-height-medium, #fff);
-        text-transform: uppercase;
-        text-align: center;
-        white-space: pre-wrap;
-        &:hover {
-          background: #ad1616;
-          transition: all 0.2s linear;
-        }
-        &:active {
-          background: #8d0d0d;
-          transition: all 0.2s linear;
-        }
-      }
-    }
-    .form__title {
-      margin-bottom: 10px;
-      @include font-face($font-family-base, $font-size-base + 8px, $line-height-medium, $black);
-      div {
-        font-family: $font-family-bold;
-      }
-    }
-    .form__slogan {
-      margin-bottom: 30px;
-      @include font-face($font-family-base, $font-size-base + 4px, $line-height-medium, $black);
-      span {
-        color: $green;
-      }
     }
     &__advantages {
       ul {

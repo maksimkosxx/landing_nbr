@@ -1,0 +1,37 @@
+.brands {
+  padding: 8vh 0 9vh;
+  box-sizing: border-box;
+  &-header {
+    text-align: center;
+    &__title {
+      max-width: 780px;
+      margin: 0 auto;
+      span {
+        color: $green;
+      }
+    }
+    &__slogan {
+      margin: 40px 0;
+    }
+  }
+  &-content {
+    &__item {
+      display: inline-block;
+      vertical-align: middle;
+      width: 19%;
+      margin-bottom: 30px;
+      img {
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+  &-btn {
+    display: block;
+    max-width: 520px;
+    margin: 40px auto 0;
+    padding-top: 8px;
+    text-align: center;
+    @include button(100%, 65px, 13px, #229b4a, #fff, $font-family-base, $font-size-base, 50px);
+  }
+}

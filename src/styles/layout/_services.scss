@@ -1,0 +1,93 @@
+.services {
+  padding: 8vh 0 10vh;
+  box-sizing: border-box;
+  &-header {
+    margin-bottom: 50px;
+    text-align: center;
+    &__icon {
+      margin-top: 45px;
+      overflow: hidden;
+    }
+    &__item {
+      @include make-lg-column(3);
+      .item__icon {
+        margin-bottom: 15px;
+      }
+      .item__price {
+        @include font-face($font-family-bold, $font-size-base + 4px, 30px, $green);
+      }
+    }
+  }
+  .services-content {
+    overflow: hidden;
+    &__item {
+      text-align: center;
+      .item__image {
+        margin-top: 20px;
+      }
+      .item__price {
+        @include font-face($font-family-bold, $font-size-base + 4px, 30px, $green);
+      }
+    }
+    &__item.item--power {
+      @include make-lg-column(3);
+      margin-top: 120px;
+    }
+    &__item.main--item {
+      @include make-lg-column(6);
+      min-height: 373px;
+      background: url(/images/services/laptop.png) 60% center no-repeat;
+    }
+    .item__line {
+      position: absolute;
+      display: block;
+    }
+    .item__line.line1 {
+      top: 97px;
+      left: 0;
+    }
+    .item__line.line2 {
+      bottom: -46px;
+      left: 30px;
+    }
+    .item__line.line3 {
+      bottom: -50px;
+      left: 50%;
+    }
+    .item__line.line4 {
+      bottom: -43px;
+      right: 5px;
+    }
+    .item__line.line5 {
+      top: 200px;
+      right: -30px;
+    }
+    .item__line.line6 {
+      top: 95px;
+      right: -50px;
+    }
+    &__item.item--drive {
+      @include make-lg-column(3);
+      margin-top: 75px;
+    }
+    &__item.item--plug {
+      @include make-lg-column(3);
+      margin: 70px 0;
+    }
+    &__item.item--keyboard {
+      @include make-lg-column(3);
+      margin-top: 0;
+    }
+    &__item.item--cooling {
+      @include make-lg-column(4);
+      @include make-lg-column-offset(1);
+      margin-top: 35px;
+    }
+    &__item.item--matrix {
+      @include make-lg-column(3);
+      @include make-lg-column-offset(1);
+      margin-top: 0;
+    }
+  }
+}
+

@@ -1,0 +1,28 @@
+.wrapper--advantages {
+  background: #ebf4ff;
+}
+.advantages {
+  padding: 9vh 0 7vh;
+  &-content {
+    margin-top: 50px;
+    overflow: hidden;
+    &__item {
+      @include make-lg-column(4);
+      min-height: 200px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .advantages-item__text {
+      max-width: 235px;
+      margin: 20px auto 0;
+    }
+  }
+  &-btn{
+    display: block;
+    max-width: 249px;
+    margin: 40px auto 0;
+    padding-top: 8px;
+    text-align: center;
+    @include button(100%, 65px, 13px, $btn-red, #fff, $font-family-base, $font-size-base, 50px);
+  }
+}

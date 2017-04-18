@@ -1,5 +1,5 @@
 function initMap() {
-    var $link = $('.contacts-info__content').find('.contacts-info__item');
+    var $link = $('').find('');
 
     $link.on("click", function (e) {
         var link = $(this).data('id'),
@@ -52,8 +52,8 @@ function googleMap() {
         window.map = new GMaps({
             div: map,
             zoom: 15,
-            lat: 55.621700,
-            lng: 37.728480,
+            lat: 51.658100,
+            lng: 39.182185,
             mapTypeControl: false,
             panControl: false,
             streetViewControl: false,
@@ -107,13 +107,12 @@ function googleMap() {
                 lat: item.arrCoordinate[0],
                 lng: item.arrCoordinate[1],
                 title: 'map-id-' + item.idItem,
-                icon: '/images/icons/point.png',
+                icon: '/images//point.png',
                 infoWindow: {
                     content: '<div id="map-id-' + item.idItem + '" class="inner">' +
                     '<h3 class="inner-title">' + item.name + '</h3>' +
                     item.items +
-                    '<p class="inner-address">' + item.text + '</p>' +
-                    '<p class="inner-time">' + item.time + '</p></div>'
+                    '<p class="inner-phone">' + item.text + '</p>'
                 }
             });
         });

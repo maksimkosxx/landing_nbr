@@ -1,7 +1,19 @@
 .map {
   width:100%;
-  height: 500px;
+  height: 572px;
   @include respond-to(handhelds) {
     pointer-events: none;
+  }
+}
+.inner {
+  padding: 5px 25px;
+  text-align: center;
+  &-title {
+    margin: 0;
+    @include font-face($font-family-base, $font-size-base + 6, $line-height-base, #858585);
+  }
+  &-phone {
+    margin: 0;
+    @include font-face($font-family-base, $font-size-base + 6, $line-height-base, #4cb11e);
   }
 }

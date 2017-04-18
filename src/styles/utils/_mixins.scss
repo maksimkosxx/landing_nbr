@@ -39,14 +39,25 @@
   min-height: $height;
   border-radius: $radius;
   border: none;
+  border-bottom: 5px solid darken($background, 10%);
   outline: none;
   background: $background;
   color: $color;
   font: $font $family;
   line-height: $line-height;
-  text-align: center;
   cursor: pointer;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  letter-spacing: 1px;
   transition: all 0.2s linear;
+  &:hover {
+    background: darken($background, 5%);
+    color: #ffffff;
+  }
+  &:active {
+    background: darken($background, 10%);
+    color: #ffffff;
+  }
 }
 
 

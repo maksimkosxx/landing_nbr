@@ -1,9 +1,23 @@
 $(document).ready(function(){
 
+    // Маска поля
+
     $(function(){
-        //2. Получить элемент, к которому необходимо добавить маску
-        $('.hero-content__form input[type="text"]').mask("+7 (999) 999-99-99");
+        $('#id_phone').mask("+7 (999) 999-99-99");
     });
+
+    //Скролл к форме заявки
+
+
+    $('.brands-btn, .advantages-btn').on('click', function (event) {
+        event.preventDefault();
+
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+
 
     // Бургер
 
@@ -19,19 +33,6 @@ $(document).ready(function(){
     //     });
     // } );
     //
-    // $('.price-switches__service').on("click", function() {
-    //     var click_id=$(this).attr('id');
-    //     if (click_id != $('.price-switches__service.active').attr('id') ) {
-    //         $('.price-switches__service').removeClass('active');
-    //         $(this).addClass('active');
-    //         $('.price-content').removeClass('active');
-    //         $('#item_' + click_id).addClass('active');
-    //
-    //     }
-    //     return false;
-    // });
-
-
 
 
 });

@@ -1,0 +1,14 @@
+.wrapper--green {
+  background: $green;
+}
+.phone-block {
+  padding: 35px 0 45px;
+  text-align: center;
+  &__text {
+    @include font-face($font-family-base, $font-size-base + 2px, $line-height-base, #fff);
+  }
+  &__number {
+    margin: 5px 0 3px;
+    @include font-face($font-family-semi-bold, $font-size-large, $line-height-large, #fff);
+  }
+}

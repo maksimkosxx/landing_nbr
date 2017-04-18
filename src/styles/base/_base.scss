@@ -14,9 +14,20 @@ h1 {
   @include font-face($font-family-base, $font-size-large, $line-height-large, $black);
 }
 
-
 .title {
   margin: 0 0 5px;
-  @include font-face($font-size-base, $font-size-large, $line-height-large, $black);
+  text-align: center;
+  @include font-face($font-family-base, $font-size-large, $line-height-large, $black);
+}
+.slogan {
+  text-align: center;
+  @include font-face($font-family-base, $font-size-base + 2px, 24px, $black);
+}
+.yellow-line {
+  width: 80%;
+  max-width: 258px;
+  height: 3px;
+  margin: 13px auto 20px;
+  background: $yellow;
 }
 
