@@ -16,9 +16,52 @@
     overflow: hidden;
     &__text {
       @include make-lg-column(6);
+      ul {
+        max-width: 400px;
+        margin: 20px auto 0;
+        li {
+          width: 90%;
+          padding: 15px 0;
+          border: 2px dashed transparent;
+          border-top: 2px dashed $black;
+          cursor: pointer;
+          &:hover {
+            .marker {
+              background: $green;
+              transition: all 0.2s linear;
+            }
+          }
+          .marker {
+           display: inline-block;
+           vertical-align: middle;
+           width: 6.5px;
+           height: 6px;
+           margin: 0 5px 0 10px;
+           border-radius: 5px;
+           background: $black;
+         }
+          .text {
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+        }
+      }
+    }
+    .diagnostics-text__header {
+      max-width: 400px;
+      margin: 0 auto;
+      @include font-face($font-family-base, $font-size-base + 12px, $line-height-medium, $black);
+
     }
     &__image {
       @include make-lg-column(6);
+      min-height: 330px;
+      margin-top: 20px;
+      background: url(/images/diagnostics.png) no-repeat;
+    }
+    .progress-bar {
+      height: 15px;
     }
   }
 }

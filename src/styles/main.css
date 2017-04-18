@@ -1694,16 +1694,50 @@ input[type="submit"] {
         .diagnostics-content__text {
           float: left;
           width: 50%; } }
+      .diagnostics-content__text ul {
+        max-width: 400px;
+        margin: 20px auto 0; }
+        .diagnostics-content__text ul li {
+          width: 90%;
+          padding: 15px 0;
+          border: 2px dashed transparent;
+          border-top: 2px dashed #000000;
+          cursor: pointer; }
+          .diagnostics-content__text ul li:hover .marker {
+            background: #4cae6d;
+            transition: all 0.2s linear; }
+          .diagnostics-content__text ul li .marker {
+            display: inline-block;
+            vertical-align: middle;
+            width: 6.5px;
+            height: 6px;
+            margin: 0 5px 0 10px;
+            border-radius: 5px;
+            background: #000000; }
+          .diagnostics-content__text ul li .text {
+            display: inline-block;
+            vertical-align: middle; }
+    .diagnostics-content .diagnostics-text__header {
+      max-width: 400px;
+      margin: 0 auto;
+      font: 28px PFBeauSansProRegular, sans-serif;
+      line-height: 24px;
+      color: #000000; }
     .diagnostics-content__image {
       position: relative;
       min-height: 1px;
       padding-left: 15px;
       padding-right: 15px;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      min-height: 330px;
+      margin-top: 20px;
+      background: url(/images/diagnostics.png) no-repeat; }
       @media (min-width: 1200px) {
         .diagnostics-content__image {
           float: left;
           width: 50%; } }
+    .diagnostics-content .progress-bar {
+      height: 15px; }
 
 .time-info {
   padding: 8vh 0 5vh;
@@ -1762,7 +1796,8 @@ input[type="submit"] {
     padding-left: 15px;
     padding-right: 15px;
     box-sizing: border-box;
-    margin-top: 30px; }
+    margin-top: 30px;
+    text-align: center; }
     @media (min-width: 1200px) {
       .questions-image {
         float: left;
