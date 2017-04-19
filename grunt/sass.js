@@ -25,9 +25,6 @@ module.exports = {
             src: ['*.scss'],
             dest: 'dist/styles',
             ext: '.css'
-        }],
-        tasks: [
-            'autoprefixer'
-        ]
+        }]
     }
 };

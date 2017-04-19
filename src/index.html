@@ -289,9 +289,9 @@
                     <img src="/images/brands/china.jpg" alt="">
                 </div>
             </div>
-            <a href="#request" class="brands-btn">
+            <button class="btn brands-btn">
                 отремонтировать ноутбук за 30 минут
-            </a>
+            </button>
         </div>
     </div>
 </div>
@@ -386,9 +386,9 @@
                         </div>
                     </div>
                 </div>
-                <a href="#special" class="advantages-btn">
+                <button class="btn advantages-btn">
                     Получить все это
-                </a>
+                </button>
             </div>
         </div>
     </div>
@@ -538,9 +538,9 @@
                         </div>
                     </div>
                 </div>
-                <a href="#request" class="diagnostics-btn">
+                <button class="btn diagnostics-btn">
                     Заказать бесплатную диагностику
-                </a>
+                </button>
             </div>
         </div>
     </div>
@@ -623,13 +623,52 @@
 </footer>
 
 
+<div class="wrapper-feedback wrapper--green">
+    <div class="feedback">
+        <div class="container">
+            <div class="row">
+                <div class="feedback-close">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="questions">
+                    <div class="questions-header">
+                        <div class="questions-header__title title">
+                            Остались вопросы?
+                        </div>
+                        <div class="yellow-line"></div>
+                        <div class="questions-header__slogan slogan">
+                            задайте их нашему специалисту и получите ответ в течении 5 минут
+                        </div>
+                    </div>
+                    <div class="questions-form">
+                        <form action="/request/request/" method="post">
+                            <input type="hidden" name="csrfmiddlewaretoken" value="HurKDOIMHIcEoGQLz4sZqlCobJcT0LvwG4Tyb6m3kAY6ESDnWf4LWhUxDWFhWcE1">
+                            <ul>
+                                <li><label for="id_name">Имя</label>
+                                    <input id="id_name" maxlength="15" name="phone" placeholder="Имя" type="text" required>
+                                </li>
+                                <li><label for="id_phone">Телефон</label>
+                                    <input id="id_phone" maxlength="15" name="phone" placeholder="+7 (___) ___-__-__" type="text" required>
+                                </li>
+                                <li><label for="id_text">Телефон</label>
+                                    <textarea name="text" id="id_text" placeholder="Нашли проблему"></textarea>
+                                </li>
+                            </ul>
+                            <input type="submit" value="Получить ответ">
+                        </form>
+                    </div>
+                    <div class="questions-image">
+                        <img src="/images/questions.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-
-
-
-
-<script src="libs/jquery/jquery.min.js"></script>
+<script src="libs/jquery/libs.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBt8xooGB8SWFGfROL57nGvaFdekuEmkCU"
         class="lptrack_blur"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.12/gmaps.min.js" class=" lptrack_blur"></script>

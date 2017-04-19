@@ -2199,3 +2199,69 @@ input[type="submit"] {
     @media only screen and (min-width: 320px) and (max-width: 767px) {
       .footer-contacts__phone {
         font-size: 30px; } }
+
+.wrapper-feedback {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  padding-top: 10vh;
+  background: #4cae6d; }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .wrapper-feedback {
+      padding-top: 5vh; } }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .wrapper-feedback {
+      padding-top: 0; } }
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .feedback .questions {
+    width: 100%;
+    padding: 0 0 0; }
+    .feedback .questions-header {
+      margin-bottom: 15px; }
+      .feedback .questions-header .yellow-line {
+        margin-bottom: 10px; }
+    .feedback .questions-image {
+      display: none; }
+  .feedback .questions-form form ul input[type="text"] {
+    height: 40px; }
+  .feedback .questions-form form textarea {
+    height: 80px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .feedback .questions-image {
+    display: none; } }
+
+.feedback-close {
+  position: relative;
+  float: right;
+  width: 50px;
+  height: 50px;
+  top: 40px;
+  right: 40px;
+  cursor: pointer; }
+  .feedback-close:hover span {
+    background: #ebedf0;
+    transition: all 0.2s linear; }
+  .feedback-close span {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 7px;
+    background: #ffe50a; }
+    .feedback-close span:first-child {
+      top: 12px;
+      left: 0;
+      transform: rotate(45deg); }
+    .feedback-close span:last-child {
+      top: 12px;
+      left: 0;
+      transform: rotate(-45deg); }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .feedback-close {
+      top: -15px;
+      right: 0; } }

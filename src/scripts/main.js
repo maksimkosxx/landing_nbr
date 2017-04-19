@@ -9,14 +9,14 @@ $(document).ready(function(){
     //Скролл к форме заявки
 
 
-    $('.brands-btn, .advantages-btn, .diagnostics-btn').on('click', function (event) {
-        event.preventDefault();
-
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top;
-
-        $('body,html').animate({scrollTop: top}, 1500);
-    });
+    // $('.brands-btn, .advantages-btn, .diagnostics-btn').on('click', function (event) {
+    //     event.preventDefault();
+    //
+    //     var id  = $(this).attr('href'),
+    //         top = $(id).offset().top;
+    //
+    //     $('body,html').animate({scrollTop: top}, 1500);
+    // });
 
     // Прогресс-бар онлайн диагностика
 
@@ -34,8 +34,28 @@ $(document).ready(function(){
 
     });
 
+    $('.hero-content__image img').fadeIn(1200);
 
-    $('.hero-content__image img').fadeIn(1000);
+
+    $('.btn').on("click", function (event) {
+        event.preventDefault();
+        $('.wrapper-feedback').fadeIn(400,
+            function () {
+                $('.feedback')
+                    .css('display', 'block')
+                    .animate({opacity: 1}, 200);
+            });
+    });
+    $('.feedback-close').on("click", function () {
+        $('.feedback')
+            .animate({opacity: 0}, 200,
+                function () {
+                    $(this).css('display', 'none');
+                    $('.wrapper-feedback').fadeOut(400);
+                }
+            );
+    });
+
 
 
 
