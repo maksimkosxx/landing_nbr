@@ -11,5 +11,9 @@
   img {
     display: block;
     margin: 50px auto 0;
+    @include respond-to(handhelds) {
+      max-width: 90%;
+    }
+
   }
 }

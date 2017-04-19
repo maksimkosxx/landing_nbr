@@ -12,16 +12,27 @@ a {
 h1 {
   margin: 0 0 5px 0;
   @include font-face($font-family-base, $font-size-large, $line-height-large, $black);
+  @include respond-to(handhelds) {
+    @include font-face($font-family-base, $font-size-large - 13px, $line-height-large - 10px, $black);
+  }
 }
 
 .title {
   margin: 0 0 5px;
   text-align: center;
   @include font-face($font-family-base, $font-size-large, $line-height-large, $black);
+  @include respond-to(handhelds) {
+    padding: 0 5px;
+    @include font-face($font-family-base, $font-size-large - 14px, $line-height-large - 13px, $black);
+  }
 }
 .slogan {
   text-align: center;
   @include font-face($font-family-base, $font-size-base + 2px, 24px, $black);
+  @include respond-to(handhelds) {
+    padding: 0 10px;
+    @include font-face($font-family-base, $font-size-base - 2px, 20px, $black);
+  }
 }
 .yellow-line {
   width: 80%;

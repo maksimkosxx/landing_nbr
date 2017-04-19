@@ -16,6 +16,7 @@
     overflow: hidden;
     &__text {
       @include make-lg-column(6);
+      @include make-sm-column(6);
       ul {
         max-width: 400px;
         margin: 20px auto 0;
@@ -25,6 +26,9 @@
           border: 2px dashed transparent;
           border-top: 2px dashed $black;
           cursor: pointer;
+          @include respond-to(handhelds) {
+            padding: 7px 0;
+          }
           &:hover {
             .marker {
               background: $green;
@@ -44,7 +48,14 @@
             display: inline-block;
             vertical-align: middle;
           }
-
+          &.active {
+            border: 2px dashed $green;
+            border-radius: 13px;
+            transition: all 0.2s linear;
+            & + li {
+              border-top: 2px dashed transparent;
+            }
+          }
         }
       }
     }
@@ -52,16 +63,70 @@
       max-width: 400px;
       margin: 0 auto;
       @include font-face($font-family-base, $font-size-base + 12px, $line-height-medium, $black);
+      @include respond-to(handhelds) {
+        font-size: 20px;
+      }
 
     }
     &__image {
       @include make-lg-column(6);
+      @include make-sm-column(6);
+    }
+    .diagnostics-progress {
+      position: relative;
+      width: 100%;
+      max-width: 409px;
       min-height: 330px;
       margin-top: 20px;
+      border: 1px solid transparent;
       background: url(/images/diagnostics.png) no-repeat;
+      text-align: center;
+      @include respond-to(handhelds) {
+        background-position: center;
+        background-size: contain;
+        min-height: 230px;
+      }
+      @include respond-to(tablets) {
+        background-size: contain;
+      }
     }
-    .progress-bar {
+    .diagnostics-value {
+      margin-top: 20%;
+      @include font-face($font-family-bold, $font-size-large, $line-height-medium, #fff);
+      @include respond-to(handhelds) {
+        margin-top: 45px;
+      }
+    }
+    .progress {
+      max-width: 235px;
       height: 15px;
+      margin: 30px auto 0;
+      border-radius: 13px;
+      background: #646464;
+      overflow: hidden;
+      &-bar {
+        width: 10%;
+        height: 15px;
+        background: $green;
+        transition: all 0.4s linear;
+      }
+      @include respond-to(handhelds) {
+        width: 60%;
+        max-width: 190px;
+      }
+    }
+  }
+  &-btn {
+    display: block;
+    max-width: 500px;
+    margin: 30px auto 0;
+    padding-top: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    @include button(100%, auto, 13px, $btn-red, #fff, $font-family-base, $font-size-base, 60px);
+    @include respond-to(handhelds) {
+      line-height: 30px;
+      max-width: 90%;
     }
   }
 }

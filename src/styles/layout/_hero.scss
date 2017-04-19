@@ -4,6 +4,9 @@
   background-size: 100%;
   background-repeat: no-repeat;
   padding-bottom: 8vh;
+  @include respond-to(handhelds) {
+    background-size: cover;
+  }
 }
 .hero {
   &-header {
@@ -17,18 +20,28 @@
     }
     &__slogan {
       @include font-face($font-family-base, $font-size-base + 8px, $line-height-medium, $black);
+      @include respond-to(handhelds) {
+        margin-top: 15px;
+        @include font-face($font-family-base, $font-size-medium, $line-height-medium, $black);
+      }
     }
   }
   &-content {
     &__image {
       @include make-lg-column(7);
+      @include make-sm-column(5);
       img {
+        display: none;
         width: 100%;
         max-width: 608px;
+      }
+      @include respond-to(handhelds) {
+        margin-bottom: 40px;
       }
     }
     &__text {
       @include make-lg-column(5);
+      @include make-sm-column(7);
     }
     &__form {
       padding: 40px 45px 0;
@@ -37,6 +50,9 @@
       text-align: center;
       overflow: hidden;
       box-sizing: border-box;
+      @include respond-to(handhelds) {
+        padding: 20px 15px 0;
+      }
     }
     &__advantages {
       ul {
@@ -46,8 +62,16 @@
           list-style: disc;
           line-height: 30px;
           color: $green;
+          @include respond-to(handhelds) {
+            line-height: 18px;
+            margin-bottom: 10px;
+          }
           span {
             color: $black;
+            @include respond-to(handhelds) {
+              font-size: 14px;
+              line-height: 16px;
+            }
           }
         }
       }

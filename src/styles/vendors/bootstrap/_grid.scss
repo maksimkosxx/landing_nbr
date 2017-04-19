@@ -12,6 +12,7 @@
 
   @media (min-width: $screen-sm-min) {
     width: $container-sm;
+    box-sizing: border-box;
   }
   @media (min-width: $screen-md-min) {
     width: $container-md;

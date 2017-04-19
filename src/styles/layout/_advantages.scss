@@ -8,6 +8,8 @@
     overflow: hidden;
     &__item {
       @include make-lg-column(4);
+      @include make-sm-column(4);
+      @include make-xs-column(6);
       min-height: 200px;
       margin-bottom: 40px;
       text-align: center;
@@ -15,6 +17,9 @@
     .advantages-item__text {
       max-width: 235px;
       margin: 20px auto 0;
+      @include respond-to(handhelds) {
+        font-size: 14px;
+      }
     }
   }
   &-btn{
@@ -24,5 +29,8 @@
     padding-top: 8px;
     text-align: center;
     @include button(100%, 65px, 13px, $btn-red, #fff, $font-family-base, $font-size-base, 50px);
+    @include respond-to(handhelds) {
+      margin: 10px auto 0;
+    }
   }
 }

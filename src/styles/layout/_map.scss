@@ -4,6 +4,10 @@
   @include respond-to(handhelds) {
     pointer-events: none;
   }
+  @include respond-to(handhelds) {
+    height: 200px;
+    pointer-events: none;
+  }
 }
 .inner {
   padding: 5px 25px;

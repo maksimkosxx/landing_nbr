@@ -7,6 +7,9 @@
   &__period {
     margin-bottom: 10px;
     @include font-face($font-family-semi-bold, $font-size-large, $line-height-large, $green);
+    @include respond-to(handhelds) {
+      font-size: 30px;
+    }
   }
   &__description {
     color: #656565;

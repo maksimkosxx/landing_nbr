@@ -10,5 +10,8 @@
   &__number {
     margin: 5px 0 3px;
     @include font-face($font-family-semi-bold, $font-size-large, $line-height-large, #fff);
+    @include respond-to(handhelds) {
+      @include font-face($font-family-semi-bold, $font-size-large - 8px, $line-height-large - 8px, #fff);
+    }
   }
 }

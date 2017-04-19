@@ -24,6 +24,12 @@
         display: block;
         margin: auto;
       }
+      @include respond-to(handhelds) {
+        width: 48%;
+      }
+      @include respond-to(tablets) {
+        width: 32%;
+      }
     }
   }
   &-btn {
@@ -33,5 +39,10 @@
     padding-top: 8px;
     text-align: center;
     @include button(100%, 65px, 13px, #229b4a, #fff, $font-family-base, $font-size-base, 50px);
+    @include respond-to(handhelds) {
+      line-height: 25px;
+      max-width: 310px;
+      font-size: 14px;
+    }
   }
 }

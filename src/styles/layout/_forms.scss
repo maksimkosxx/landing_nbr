@@ -27,6 +27,9 @@ input[type="submit"] {
   div {
     font-family: $font-family-bold;
   }
+  @include respond-to(handhelds) {
+    @include font-face($font-family-base, $font-size-medium, $line-height-medium, $black);
+  }
 }
 .form__slogan {
   margin-bottom: 30px;
@@ -42,30 +45,43 @@ input[type="submit"] {
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
+    @include respond-to(handhelds) {
+      max-width: 90%;
+    }
     ul {
       display: inline-block;
       vertical-align: middle;
       width: 100%;
       max-width: 355px;
       margin: 0 35px 0 0;
+      @include respond-to(handhelds) {
+        max-width: 100%;
+        margin-right: 0;
+      }
       input[type="text"] {
         margin-bottom: 0;
         border: none;
         height: 55px;
         padding-left: 40px;
         border-radius: 13px;
+        @include respond-to(handhelds) {
+          margin-bottom: 15px;
+        }
       }
     }
     input[type="submit"] {
       display: inline-block;
       vertical-align: middle;
-      max-width: 400px;
+      max-width: 380px;
       padding-top: 5px;
       margin-bottom: 0;
       @include button(100%, 57px, 13px, $yellow, $black, $font-family-base, $font-size-base, $line-height-base);
       &:active,
       &:hover {
         color: $black;
+      }
+      @include respond-to(tablets) {
+        max-width: 350px;
       }
     }
   }

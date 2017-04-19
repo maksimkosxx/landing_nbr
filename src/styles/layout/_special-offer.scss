@@ -12,6 +12,9 @@
     border: 5px dashed #fff;
     border-radius: 10px;
     box-sizing: border-box;
+    @include respond-to(handhelds) {
+      margin: 40px 10px;
+    }
   }
   &__text {
     display: inline-block;
@@ -29,6 +32,9 @@
       @include font-face($font-family-light, $font-size-base + 2px, $line-height-base, #fff);
       font-weight: lighter;
     }
+    @include respond-to(handhelds) {
+      width: 100%;
+    }
   }
   &__image {
     display: inline-block;
@@ -36,6 +42,11 @@
     max-width: 250px;
     width: 30%;
     text-align: center;
+    @include respond-to(handhelds) {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+    }
   }
   &__form {
     margin: 35px 0 0 0;
