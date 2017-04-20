@@ -12,9 +12,8 @@ module.exports = {
         'jshint'
     ],
     devSecond: [
-        'sass:dev',
-        'uglify',
-        'concat'
+        'sass:dev'
+
     ],
 
     // Задачи для продакшна

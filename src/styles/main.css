@@ -2265,3 +2265,57 @@ input[type="submit"] {
     .feedback-close {
       top: -15px;
       right: 0; } }
+
+.thanks--wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url(/images/thanks-background.jpg) center no-repeat;
+  background-size: cover; }
+
+.thanks-block {
+  margin-top: 15%;
+  text-align: center; }
+  .thanks-block__icon {
+    margin-bottom: 30px; }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      .thanks-block__icon {
+        display: none; } }
+    .thanks-block__icon img {
+      max-width: 111px;
+      width: 50%; }
+  .thanks-block__title span {
+    color: #34a21b; }
+  .thanks-block__description {
+    margin-top: 15px;
+    color: #656565; }
+  .thanks-block__btn {
+    display: block;
+    max-width: 249px;
+    margin: 60px auto 0;
+    padding-top: 8px;
+    text-align: center;
+    width: 100%;
+    min-height: 65px;
+    border-radius: 13px;
+    border: none;
+    border-bottom: 5px solid #900b0b;
+    outline: none;
+    background: #c00e0e;
+    color: #fff;
+    font: 16px PFBeauSansProRegular, sans-serif;
+    line-height: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    transition: all 0.2s linear; }
+    .thanks-block__btn:hover {
+      background: #a80c0c;
+      color: #ffffff; }
+    .thanks-block__btn:active {
+      background: #900b0b;
+      color: #ffffff; }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      .thanks-block__btn {
+        margin: 10px auto 0; } }

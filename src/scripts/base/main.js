@@ -5,9 +5,7 @@ $(document).ready(function(){
     $(function(){
         $('input[type="text"]').mask("+7 (999) 999-99-99");
     });
-
     //Скролл к форме заявки
-
 
     // $('.brands-btn, .advantages-btn, .diagnostics-btn').on('click', function (event) {
     //     event.preventDefault();
