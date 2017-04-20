@@ -1975,22 +1975,22 @@ input[type="submit"] {
         .diagnostics-content__text {
           float: left;
           width: 50%; } }
-      .diagnostics-content__text ul {
-        max-width: 400px;
+      .diagnostics-content__text .diagnostics-list {
+        max-width: 500px;
         margin: 20px auto 0; }
-        .diagnostics-content__text ul li {
+        .diagnostics-content__text .diagnostics-list__item {
           width: 90%;
           padding: 15px 0;
           border: 2px dashed transparent;
           border-top: 2px dashed #000000;
           cursor: pointer; }
           @media only screen and (min-width: 320px) and (max-width: 767px) {
-            .diagnostics-content__text ul li {
+            .diagnostics-content__text .diagnostics-list__item {
               padding: 7px 0; } }
-          .diagnostics-content__text ul li:hover .marker {
+          .diagnostics-content__text .diagnostics-list__item:hover .marker {
             background: #4cae6d;
             transition: all 0.2s linear; }
-          .diagnostics-content__text ul li .marker {
+          .diagnostics-content__text .diagnostics-list__item .marker {
             display: inline-block;
             vertical-align: middle;
             width: 6.5px;
@@ -1998,14 +1998,17 @@ input[type="submit"] {
             margin: 0 5px 0 10px;
             border-radius: 5px;
             background: #000000; }
-          .diagnostics-content__text ul li .text {
+          .diagnostics-content__text .diagnostics-list__item .text {
             display: inline-block;
-            vertical-align: middle; }
-          .diagnostics-content__text ul li.active {
+            vertical-align: middle;
+            max-width: 90%; }
+          .diagnostics-content__text .diagnostics-list__item:hover {
             border: 2px dashed #4cae6d;
             border-radius: 13px;
             transition: all 0.2s linear; }
-            .diagnostics-content__text ul li.active + li {
+            .diagnostics-content__text .diagnostics-list__item:hover .marker {
+              background: #4cae6d; }
+            .diagnostics-content__text .diagnostics-list__item:hover + li {
               border-top: 2px dashed transparent; }
     .diagnostics-content .diagnostics-text__header {
       max-width: 400px;
@@ -2108,6 +2111,9 @@ input[type="submit"] {
       .diagnostics-btn {
         line-height: 30px;
         max-width: 90%; } }
+
+.diagnostics-list.sub-first {
+  display: none; }
 
 .time-info {
   padding: 8vh 0 5vh;

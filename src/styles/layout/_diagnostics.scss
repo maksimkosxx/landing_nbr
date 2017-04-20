@@ -17,10 +17,10 @@
     &__text {
       @include make-lg-column(6);
       @include make-sm-column(6);
-      ul {
-        max-width: 400px;
+      .diagnostics-list {
+        max-width: 500px;
         margin: 20px auto 0;
-        li {
+        &__item {
           width: 90%;
           padding: 15px 0;
           border: 2px dashed transparent;
@@ -47,11 +47,15 @@
           .text {
             display: inline-block;
             vertical-align: middle;
+            max-width: 90%;
           }
-          &.active {
+          &:hover {
             border: 2px dashed $green;
             border-radius: 13px;
             transition: all 0.2s linear;
+            .marker {
+              background: $green;
+            }
             & + li {
               border-top: 2px dashed transparent;
             }
@@ -129,4 +133,7 @@
       max-width: 90%;
     }
   }
+}
+.diagnostics-list.sub-first {
+  display: none;
 }

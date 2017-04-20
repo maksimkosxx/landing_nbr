@@ -18,19 +18,50 @@ $(document).ready(function(){
 
     // Прогресс-бар онлайн диагностика
 
-    $('.diagnostics-list li').on('click', function(){
+    // $('.diagnostics-list li').on('click', function(){
+    //
+    //     $('.diagnostics-list__item').removeClass('active');
+    //     $(this).addClass('active');
+    //
+    //     var number = $(this).attr('value');
+    //
+    // });
 
-        $('.diagnostics-list__item').removeClass('active');
-        $(this).addClass('active');
 
-        var number = $(this).attr('value');
+        $('.diagnostics-list li:first-child').on('click', function(){
 
-        if($(this).hasClass('active')) {
-            $('.progress-bar').css({'width': number});
+            var number = $(this).attr('value');
+
+
+            $('.diagnostics-list.list-base').fadeOut(400,
+                function () {
+                    $('.diagnostics-list.sub-first')
+                        .css('display', 'block')
+                        .animate(400);
+                });
             $('.diagnostics-value').html(number);
-        }
+            $('.progress-bar').css({'width':number});
 
-    });
+        });
+        $('.diagnostics-list li:nth-child(2)').on('click', function(){
+
+            $('.diagnostics-list.list-base').fadeOut(400,
+                function () {
+                    $('.diagnostics-list.sub-first')
+                        .css('display', 'block')
+                        .animate(400);
+                });
+            $('.diagnostics-value').html(number);
+            $('.progress-bar').css({'width':number});
+
+        });
+
+
+
+
+
+
+
 
     $('.hero-content__image img').fadeIn(1200);
 
