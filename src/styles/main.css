@@ -1978,6 +1978,18 @@ input[type="submit"] {
       .diagnostics-content__text .diagnostics-list {
         max-width: 500px;
         margin: 20px auto 0; }
+        .diagnostics-content__text .diagnostics-list li a {
+          margin: 5px 0 20px;
+          text-decoration: underline; }
+          .diagnostics-content__text .diagnostics-list li a:hover {
+            text-decoration: none;
+            transition: all 0.2s linear; }
+        .diagnostics-content__text .diagnostics-list .list-header {
+          margin: 0 0 20px;
+          color: #656565; }
+        .diagnostics-content__text .diagnostics-list .list-item__header {
+          margin-bottom: 10px;
+          font-size: 22px; }
         .diagnostics-content__text .diagnostics-list__item {
           width: 90%;
           padding: 15px 0;
@@ -2002,6 +2014,12 @@ input[type="submit"] {
             display: inline-block;
             vertical-align: middle;
             max-width: 90%; }
+          .diagnostics-content__text .diagnostics-list__item .price {
+            float: right;
+            line-height: 23px;
+            margin: 0 10px;
+            color: #4cae6d;
+            font-family: PFBeauSansProBold, sans-serif; }
           .diagnostics-content__text .diagnostics-list__item:hover {
             border: 2px dashed #4cae6d;
             border-radius: 13px;
@@ -2010,8 +2028,11 @@ input[type="submit"] {
               background: #4cae6d; }
             .diagnostics-content__text .diagnostics-list__item:hover + li {
               border-top: 2px dashed transparent; }
+        .diagnostics-content__text .diagnostics-list .list-item__footer {
+          color: #656565;
+          margin-top: 15px; }
     .diagnostics-content .diagnostics-text__header {
-      max-width: 400px;
+      max-width: 500px;
       margin: 0 auto;
       font: 28px PFBeauSansProRegular, sans-serif;
       line-height: 24px;
@@ -2112,7 +2133,7 @@ input[type="submit"] {
         line-height: 30px;
         max-width: 90%; } }
 
-.diagnostics-list.sub-first {
+.sub-list {
   display: none; }
 
 .time-info {

@@ -2,9 +2,9 @@ $(document).ready(function(){
 
     // Маска поля
 
-    $(function(){
-        $('input[type="text"]').mask("+7 (999) 999-99-99");
-    });
+    // $(function(){
+    //     $('input[type="text"]').mask("+7 (999) 999-99-99");
+    // });
     //Скролл к форме заявки
 
     // $('.brands-btn, .advantages-btn, .diagnostics-btn').on('click', function (event) {
@@ -28,33 +28,44 @@ $(document).ready(function(){
     // });
 
 
-        $('.diagnostics-list li:first-child').on('click', function(){
+        $('.diagnostics-list li').on('click', function(){
 
+            var click_id=$(this).attr('id');
             var number = $(this).attr('value');
+            var item = '#item_' + click_id;
 
+            if (click_id) {
 
-            $('.diagnostics-list.list-base').fadeOut(400,
-                function () {
-                    $('.diagnostics-list.sub-first')
-                        .css('display', 'block')
-                        .animate(400);
-                });
-            $('.diagnostics-value').html(number);
-            $('.progress-bar').css({'width':number});
+                $('.diagnostics-list').css({'display':'none'});
 
-        });
-        $('.diagnostics-list li:nth-child(2)').on('click', function(){
+                $(item).fadeIn(500,
+                     function () {
+                         $(item)
+                             .css('display', 'block')
+                             .animate(500);
+                     });
 
-            $('.diagnostics-list.list-base').fadeOut(400,
-                function () {
-                    $('.diagnostics-list.sub-first')
-                        .css('display', 'block')
-                        .animate(400);
-                });
-            $('.diagnostics-value').html(number);
-            $('.progress-bar').css({'width':number});
+                $('.diagnostics-value').html(number);
+                $('.progress-bar').css({'width':number});
+
+            }
+            return false;
 
         });
+
+
+        // $('.diagnostics-list li:nth-child(2)').on('click', function(){
+        //
+        //     $('.diagnostics-list.list-base').fadeOut(400,
+        //         function () {
+        //             $('.diagnostics-list.sub-first')
+        //                 .css('display', 'block')
+        //                 .animate(400);
+        //         });
+        //     $('.diagnostics-value').html(number);
+        //     $('.progress-bar').css({'width':number});
+        //
+        // });
 
 
 
