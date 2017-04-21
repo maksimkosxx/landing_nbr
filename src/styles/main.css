@@ -2013,11 +2013,18 @@ input[type="submit"] {
           .diagnostics-content__text .diagnostics-list__item .text {
             display: inline-block;
             vertical-align: middle;
-            max-width: 90%; }
+            max-width: 324px;
+            width: 80%; }
+            .diagnostics-content__text .diagnostics-list__item .text.special-text {
+              margin-left: 25px;
+              color: #4cae6d; }
           .diagnostics-content__text .diagnostics-list__item .price {
-            float: right;
-            line-height: 23px;
-            margin: 0 10px;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: right;
+            max-width: 78px;
+            width: 100%;
+            margin: 0 7px;
             color: #4cae6d;
             font-family: PFBeauSansProBold, sans-serif; }
           .diagnostics-content__text .diagnostics-list__item:hover {

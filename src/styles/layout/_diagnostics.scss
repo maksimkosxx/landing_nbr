@@ -65,12 +65,20 @@
           .text {
             display: inline-block;
             vertical-align: middle;
-            max-width: 90%;
+            max-width: 324px;
+            width: 80%;
+            &.special-text {
+              margin-left: 25px;
+              color: $green;
+            }
           }
           .price {
-            float: right;
-            line-height: 23px;
-            margin: 0 10px;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: right;
+            max-width: 78px;
+            width: 100%;
+            margin: 0 7px;
             color: $green;
             font-family: $font-family-bold;
           }
