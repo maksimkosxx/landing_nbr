@@ -41,8 +41,8 @@
         &__item {
           width: 90%;
           padding: 15px 0;
-          border: 2px dashed transparent;
-          border-top: 2px dashed $black;
+          border: 2px dashed;
+          border-color: $black transparent transparent;
           cursor: pointer;
           @include respond-to(handhelds) {
             padding: 7px 0;
@@ -96,7 +96,18 @@
         }
         .list-item__footer {
           color: #656565;
-          margin-top: 15px;
+          padding-top: 15px;
+          box-sizing: border-box;
+          border: 2px solid transparent;
+        }
+        &.step-3 {
+          .diagnostics-list__item {
+            pointer-events: none;
+          }
+          .diagnostics-list__item.back-link {
+            pointer-events: auto;
+            padding: 15px 0 14px;
+          }
         }
       }
     }

@@ -1993,8 +1993,8 @@ input[type="submit"] {
         .diagnostics-content__text .diagnostics-list__item {
           width: 90%;
           padding: 15px 0;
-          border: 2px dashed transparent;
-          border-top: 2px dashed #000000;
+          border: 2px dashed;
+          border-color: #000000 transparent transparent;
           cursor: pointer; }
           @media only screen and (min-width: 320px) and (max-width: 767px) {
             .diagnostics-content__text .diagnostics-list__item {
@@ -2037,7 +2037,14 @@ input[type="submit"] {
               border-top: 2px dashed transparent; }
         .diagnostics-content__text .diagnostics-list .list-item__footer {
           color: #656565;
-          margin-top: 15px; }
+          padding-top: 15px;
+          box-sizing: border-box;
+          border: 2px solid transparent; }
+        .diagnostics-content__text .diagnostics-list.step-3 .diagnostics-list__item {
+          pointer-events: none; }
+        .diagnostics-content__text .diagnostics-list.step-3 .diagnostics-list__item.back-link {
+          pointer-events: auto;
+          padding: 15px 0 14px; }
     .diagnostics-content .diagnostics-text__header {
       max-width: 500px;
       margin: 0 auto;
