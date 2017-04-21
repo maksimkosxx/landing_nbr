@@ -2,9 +2,9 @@ $(document).ready(function(){
 
     // Маска поля
 
-    // $(function(){
-    //     $('input[type="text"]').mask("+7 (999) 999-99-99");
-    // });
+    $(function(){
+        $('input[type="text"]').mask("+7 (999) 999-99-99");
+    });
     //Скролл к форме заявки
 
     // $('.brands-btn, .advantages-btn, .diagnostics-btn').on('click', function (event) {
@@ -14,17 +14,6 @@ $(document).ready(function(){
     //         top = $(id).offset().top;
     //
     //     $('body,html').animate({scrollTop: top}, 1500);
-    // });
-
-    // Прогресс-бар онлайн диагностика
-
-    // $('.diagnostics-list li').on('click', function(){
-    //
-    //     $('.diagnostics-list__item').removeClass('active');
-    //     $(this).addClass('active');
-    //
-    //     var number = $(this).attr('value');
-    //
     // });
 
 
@@ -54,25 +43,6 @@ $(document).ready(function(){
         });
 
 
-        // $('.diagnostics-list li:nth-child(2)').on('click', function(){
-        //
-        //     $('.diagnostics-list.list-base').fadeOut(400,
-        //         function () {
-        //             $('.diagnostics-list.sub-first')
-        //                 .css('display', 'block')
-        //                 .animate(400);
-        //         });
-        //     $('.diagnostics-value').html(number);
-        //     $('.progress-bar').css({'width':number});
-        //
-        // });
-
-
-
-
-
-
-
 
     $('.hero-content__image img').fadeIn(1200);
 
@@ -95,9 +65,6 @@ $(document).ready(function(){
                 }
             );
     });
-
-
-
 
 
 });

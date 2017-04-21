@@ -81,6 +81,9 @@
             margin: 0 7px;
             color: $green;
             font-family: $font-family-bold;
+            .fa-rub {
+              font-size: 0.86em;
+            }
           }
           &:hover {
             border: 2px dashed $green;

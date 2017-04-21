@@ -2027,6 +2027,8 @@ input[type="submit"] {
             margin: 0 7px;
             color: #4cae6d;
             font-family: PFBeauSansProBold, sans-serif; }
+            .diagnostics-content__text .diagnostics-list__item .price .fa-rub {
+              font-size: 0.86em; }
           .diagnostics-content__text .diagnostics-list__item:hover {
             border: 2px dashed #4cae6d;
             border-radius: 13px;
