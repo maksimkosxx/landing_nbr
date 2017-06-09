@@ -1990,19 +1990,23 @@ input[type="submit"] {
         .diagnostics-content__text .diagnostics-list .list-item__header {
           margin-bottom: 10px;
           font-size: 22px; }
-        .diagnostics-content__text .diagnostics-list__item {
+        .diagnostics-content__text .diagnostics-list__item,
+        .diagnostics-content__text .diagnostics-list .back-link {
           width: 90%;
           padding: 15px 0;
           border: 2px dashed;
           border-color: #000000 transparent transparent;
           cursor: pointer; }
           @media only screen and (min-width: 320px) and (max-width: 767px) {
-            .diagnostics-content__text .diagnostics-list__item {
+            .diagnostics-content__text .diagnostics-list__item,
+            .diagnostics-content__text .diagnostics-list .back-link {
               padding: 7px 0; } }
-          .diagnostics-content__text .diagnostics-list__item:hover .marker {
+          .diagnostics-content__text .diagnostics-list__item:hover .marker,
+          .diagnostics-content__text .diagnostics-list .back-link:hover .marker {
             background: #4cae6d;
             transition: all 0.2s linear; }
-          .diagnostics-content__text .diagnostics-list__item .marker {
+          .diagnostics-content__text .diagnostics-list__item .marker,
+          .diagnostics-content__text .diagnostics-list .back-link .marker {
             display: inline-block;
             vertical-align: middle;
             width: 6.5px;
@@ -2010,33 +2014,43 @@ input[type="submit"] {
             margin: 0 5px 0 10px;
             border-radius: 5px;
             background: #000000; }
-          .diagnostics-content__text .diagnostics-list__item .text {
+          .diagnostics-content__text .diagnostics-list__item .text,
+          .diagnostics-content__text .diagnostics-list .back-link .text {
             display: inline-block;
             vertical-align: middle;
-            max-width: 324px;
+            max-width: 320px;
             width: 80%; }
-            .diagnostics-content__text .diagnostics-list__item .text.special-text {
+            .diagnostics-content__text .diagnostics-list__item .text.special-text,
+            .diagnostics-content__text .diagnostics-list .back-link .text.special-text {
               margin-left: 25px;
               color: #4cae6d; }
-          .diagnostics-content__text .diagnostics-list__item .price {
+          .diagnostics-content__text .diagnostics-list__item .price,
+          .diagnostics-content__text .diagnostics-list .back-link .price {
             display: inline-block;
             vertical-align: middle;
             text-align: right;
-            max-width: 78px;
+            max-width: 84px;
             width: 100%;
             margin: 0 7px;
             color: #4cae6d;
             font-family: PFBeauSansProBold, sans-serif; }
-            .diagnostics-content__text .diagnostics-list__item .price .fa-rub {
+            .diagnostics-content__text .diagnostics-list__item .price .fa-rub,
+            .diagnostics-content__text .diagnostics-list .back-link .price .fa-rub {
               font-size: 0.86em; }
-          .diagnostics-content__text .diagnostics-list__item:hover {
+          .diagnostics-content__text .diagnostics-list__item:hover,
+          .diagnostics-content__text .diagnostics-list .back-link:hover {
             border: 2px dashed #4cae6d;
             border-radius: 13px;
             transition: all 0.2s linear; }
-            .diagnostics-content__text .diagnostics-list__item:hover .marker {
+            .diagnostics-content__text .diagnostics-list__item:hover .marker,
+            .diagnostics-content__text .diagnostics-list .back-link:hover .marker {
               background: #4cae6d; }
-            .diagnostics-content__text .diagnostics-list__item:hover + li {
+            .diagnostics-content__text .diagnostics-list__item:hover + li,
+            .diagnostics-content__text .diagnostics-list .back-link:hover + li {
               border-top: 2px dashed transparent; }
+          .diagnostics-content__text .diagnostics-list__item.hidden,
+          .diagnostics-content__text .diagnostics-list .back-link.hidden {
+            display: none; }
         .diagnostics-content__text .diagnostics-list .list-item__footer {
           color: #656565;
           padding-top: 15px;

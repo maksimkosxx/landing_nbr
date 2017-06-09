@@ -2,9 +2,9 @@ $(document).ready(function(){
 
     // Маска поля
 
-    $(function(){
-        $('input[type="text"]').mask("+7 (999) 999-99-99");
-    });
+    // $(function(){
+    //     $('input[type="text"]').mask("+7 (999) 999-99-99");
+    // });
     //Скролл к форме заявки
 
     // $('.brands-btn, .advantages-btn, .diagnostics-btn').on('click', function (event) {
@@ -17,30 +17,46 @@ $(document).ready(function(){
     // });
 
 
+    function diagnosticsStep() {
+
         $('.diagnostics-list li').on('click', function(){
 
-            var click_id=$(this).attr('id');
+            var indexItem = $(this).index('.diagnostics-list__item');
+            var indexLink = $(this).index('.back-link');
             var number = $(this).attr('value');
-            var item = '#item_' + click_id;
+            var listItem = '.list-item_' + (++indexItem);
+            var listBack = '.list-item_' + indexLink;
 
-            if (click_id) {
+            if ($(this).hasClass('diagnostics-list__item')) {
+                console.log(indexItem);
 
                 $('.diagnostics-list').css({'display':'none'});
 
-                $(item).fadeIn(500,
-                     function () {
-                         $(item)
-                             .css('display', 'block')
-                             .animate(500);
-                     });
+                $(listItem).fadeIn(500,
+                    function () {
+                        $(listItem)
+                            .css('display', 'block')
+                            .animate(500);
+                    });
 
                 $('.diagnostics-value').html(number);
                 $('.progress-bar').css({'width':number});
 
-            }
-            return false;
+            } else if ($(this).hasClass('back-link')) {
+                console.log(indexLink);
 
+                $('.diagnostics-list').css({'display':'none'});
+
+                $(listBack).fadeIn(500,
+                    function () {
+                        $(listBack)
+                            .css('display', 'block')
+                            .animate(500);
+                    });
+            }
         });
+    }
+    diagnosticsStep();
 
 
 
