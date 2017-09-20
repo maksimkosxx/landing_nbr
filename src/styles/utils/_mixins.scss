@@ -90,6 +90,11 @@
       @content;
     }
   }
+  @else if $media == notebook {
+    @media only screen and (min-width: 1201px) and (max-width: 1400px) {
+      @content;
+    }
+  }
 }
 
 // responsive mixin END

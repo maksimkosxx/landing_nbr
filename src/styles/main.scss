@@ -36,21 +36,4 @@
         'base/base';
 
 
-@import 'layout/header',
-        'layout/forms',
-        'layout/hero',
-        'layout/services',
-        'layout/phone-block',
-        'layout/brands',
-        'layout/advantages',
-        'layout/reviews',
-        'layout/special-offer',
-        'layout/certificates',
-        'layout/diagnostics',
-        'layout/time-info',
-        'layout/map',
-        'layout/questions',
-        'layout/footer',
-        'layout/feedback';
-
-@import 'pages/thanks-page';
+@import 'layout/hero';
