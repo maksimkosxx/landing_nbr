@@ -110,6 +110,32 @@ function setBalloonPane (map, placemark, mapData) {
 
 $(document).ready(function () {
 
+
+
+    // FEEDBACK
+
+    $('.btn--request').on('click', function (event) {
+        event.preventDefault();
+
+        $('.wrapper-feedback').fadeIn(400,
+            function () {
+                $('body').css('overflow','hidden');
+                $('.feedback')
+                    .css('display', 'block')
+                    .animate({opacity: 1}, 200);
+            });
+    });
+    $('.feedback-close').on('click', function () {
+        $('body').css('overflow','auto');
+        $('.feedback')
+            .animate({opacity: 0}, 200,
+                function () {
+                    $(this).css('display', 'none');
+                    $('.wrapper-feedback').fadeOut(400);
+                }
+            );
+    });
+
     // $('video').on('ended', function () {
     //     this.load();
     //     this.play();

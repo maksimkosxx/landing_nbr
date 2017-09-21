@@ -2,8 +2,22 @@
   font-family: ProximaNovaRegular;
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/ProximaNovaRegular/ProximaNovaRegular.woff') format('woff'),
-  url('/fonts/ProximaNovaRegular/ProximaNovaRegular.otf') format('otf');
+  src: url('/fonts/ProximaNova/ProximaNovaRegular.woff') format('woff'),
+  url('/fonts/ProximaNova/ProximaNovaRegular.otf') format('otf');
+}
+@font-face {
+  font-family: ProximaNovaLight;
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/ProximaNova/ProximaNovaLight.woff') format('woff'),
+  url('/fonts/ProximaNova/ProximaNovaLight.ttf') format('otf');
+}
+@font-face {
+  font-family: GilroyLight;
+  font-style: normal;
+  font-weight: 200;
+  src: url('/fonts/gilroy/GilroyLight.woff') format('woff'),
+  url('/fonts/gilroy/GilroyLight.ttf') format('ttf');
 }
 @font-face {
   font-family: GilroyBlack;

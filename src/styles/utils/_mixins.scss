@@ -34,28 +34,27 @@
 
 // button mixin
 
-@mixin button($width, $height, $radius, $background, $color, $family, $font, $line-height) {
+@mixin button($width, $height, $background, $color, $font) {
   width: $width;
   min-height: $height;
-  border-radius: $radius;
+  border-radius: 60px;
   border: none;
-  border-bottom: 5px solid darken($background, 10%);
   outline: none;
   background: $background;
   color: $color;
+  $family: $font-gilroy-black;
   font: $font $family;
-  line-height: $line-height;
-  cursor: pointer;
-  text-transform: uppercase;
-  box-sizing: border-box;
+  line-height: $height - 4px;
+  text-align: center;
   letter-spacing: 1px;
+  cursor: pointer;
+  box-sizing: border-box;
   transition: all 0.2s linear;
   &:hover {
-    background: darken($background, 5%);
-    color: #ffffff;
+    box-shadow: 8.5px 14.7px 31.9px 6.1px rgba(73,206,102,.24);
   }
   &:active {
-    background: darken($background, 10%);
+    background: darken($background, 15%);
     color: #ffffff;
   }
 }

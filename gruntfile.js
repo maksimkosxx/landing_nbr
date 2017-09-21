@@ -41,6 +41,22 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        cmq: {
+            options: {
+                log: false
+            },
+            your_target: {
+                files: {
+                    'dist/styles/': ['src/styles/*.css']
+                }
+            }
+        },
+        cssmin: {
+            dist: {
+                src: 'dist/styles/main.css',
+                dest: 'dist/styles/main.min.css'
+            }
+        },
         concat: {
             dev: {
                 src: ['src/scripts/main/*.js'],
@@ -91,7 +107,8 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     src: [
-                        "src/fonts/**/*.{ttf, otf, svg, woff, woff2}"
+                        "src/fonts/**/*.{ttf, otf, svg, woff, woff2}",
+                        "src/video/**/*"
                     ],
                     dest: "dist/"
                 }]
@@ -100,7 +117,7 @@ module.exports = function (grunt) {
 
     });
 
-    grunt.registerTask('default', ['clean', 'sass:prod', 'uglify', 'concat:prod', 'imagemin', 'copy']);
+    grunt.registerTask('default', ['clean', 'sass:prod', 'cmq', 'cssmin',  'uglify', 'concat:prod', 'imagemin', 'copy']);
 
 
 };

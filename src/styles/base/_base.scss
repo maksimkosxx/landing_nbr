@@ -3,10 +3,11 @@ body {
   @include font-face($font-family-base, $font-size-base, $line-height-base, $black);
 }
 
-
-
-.title {
-
+h2.title {
+  font: 40px $font-gilroy-black;
+}
+.fa.fa-rub {
+  font-size: 0.86em;
 }
 
 
